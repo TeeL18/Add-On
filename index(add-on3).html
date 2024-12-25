@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" herf="src/style.css" />
+    <script src="src/index.js"></script>
+    <title>HTML Select Elements</title>
+    <style>
+      select {
+        padding: 5px 8px;
+        border-radius: 4px;
+        display: block;
+      }
+      p {
+        padding: 5px 0;
+      }
+    </style>
+  </head>
+  <p>
+    Challeneg 1 - Create a select element inside a form with five fruits as
+    options...
+  </p>
+  <body>
+    <div>
+      <form action="/submit">
+        <label for="fruits">What is your favourite fruit?</label>
+        <select name="fruits" id="fruits">
+          <option value="">Select a fruit</option>
+          <option value="strawberry">Strawberry🍓</option>
+          <option value="mango">Mango🥭</option>
+          <option value="grapes">Grapes🍇</option>
+          <option value="Kiwi">Kiwi🥝</option>
+          <option value="melon">Melon🍈</option>
+        </select>
+      </form>
+    </div>
+    <p>
+      Challenge 2 - Create a select element with 3 primary colours, when colour
+      is selected, display a heart emoji to go with that colour.
+    </p>
+    <label for="primary-colours">What is your favourite colour?</label>
+    <select id="primary-colours">
+      <option value="">Choose a colour</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <script>
+      function showSelectedColour(event) {
+        //if (event.target.value.length > 0) {
+        if (event.target.value === "red") {
+          alert("❤️");
+        }
+        if (event.target.value === "blue") {
+          alert("💙");
+        }
+        if (event.target.value === "yellow") {
+          alert("💛");
+        }
+      }
+      //}
+      let colourSelect = document.querySelector("#primary-colours");
+
+      colourSelect.addEventListener("change", showSelectedColour);
+    </script>
+  </body>
+</html>
