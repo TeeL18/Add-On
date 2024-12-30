@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Timing Events</title>
+  </head>
+  <body>
+    <p>
+      Challenge 1 - Display the current date in the div below, only 5 seconds
+      after the page loads
+    </p>
+
+    <div id="date">👉🏾Current Date Here👈🏾</div>
+    <script>
+      function currentDate() {
+        let currentDate = document.querySelector("#date");
+        currentDate.innerHTML = new Date();
+      }
+      setTimeout(currentDate, 5000);
+    </script>
+
+    <p>
+      Challenge 2 - Display the number of milliseconds of the current date below
+      and update it every milliseconds
+    </p>
+
+    <div id="milliseconds"></div>
+    <script>
+      function currentTime() {
+        let milliseconds = document.querySelector("#milliseconds");
+        let Time = new Date();
+        milliseconds.innerHTML = `${Time.getMilliseconds()}`;
+      }
+      setInterval(currentTime, 10);
+    </script>
+  </body>
+</html>
